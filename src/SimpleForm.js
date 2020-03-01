@@ -22,6 +22,13 @@ class SimpleForm extends Component{
                     component = {SimpleFormInput} 
                     className = "simpleForm__input"
                     />
+                <Field 
+                    name="remember" 
+                    label="Remember me?"
+                    type="checkbox" 
+                    component={SimpleFormInput}
+                    className="simpleForm__input--inline"
+                    />
                 <button type="submit" className="simpleForm__btn">Submit</button>
             </form>
         );
