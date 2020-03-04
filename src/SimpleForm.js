@@ -2,6 +2,7 @@ import { Component } from "react";
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import './SimpleForm.css';
+import { required, minLength, maxLength } from "./validation";
 import SimpleFormInput from "./SimpleFormInput";
 
 class SimpleForm extends Component{
@@ -14,6 +15,7 @@ class SimpleForm extends Component{
                     type="text" 
                     component = {SimpleFormInput} 
                     className = "simpleForm__input"
+                    validate={[ required, minLength, maxLength ]}
                     />
                 <Field 
                     name="password"
@@ -21,6 +23,7 @@ class SimpleForm extends Component{
                     type="password" 
                     component = {SimpleFormInput} 
                     className = "simpleForm__input"
+                    validate={[ required, minLength, maxLength ]}
                     />
                 <Field 
                     name="remember" 
